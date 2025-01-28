@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using ASP.NET_Con_MVC_5.Services;
 using System.Web.Mvc;
 
 namespace ASP.NET_Con_MVC_5.Controllers
@@ -17,7 +14,10 @@ namespace ASP.NET_Con_MVC_5.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            var peliculasService = new PeliculasService();
+            var model = peliculasService.ObtenerPeliculas();
+
+            return View(model);
         }
 
         public ActionResult Contact()
