@@ -26,5 +26,10 @@ namespace ASP.NET_Con_MVC_5.Controllers
 
             return View();
         }
+
+        public FileResult DownloadFile()
+        {
+            return File("/Files/File Result.pdf", "text/plain", "File Result.pdf");
+        }
     }
 }
