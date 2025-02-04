@@ -31,5 +31,10 @@ namespace ASP.NET_Con_MVC_5.Controllers
         {
             return File("/Files/File Result.pdf", "text/plain", "File Result.pdf");
         }
+
+        public ContentResult ContendResult()
+        {
+            return Content("Jorge"); // Content("Jorge", "application/json")
+        }
     }
 }
